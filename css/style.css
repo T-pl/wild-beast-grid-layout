@@ -57,8 +57,14 @@ img{
 .cabecalho li + li {
   margin-left: 30px;
 }
+
+/* SIDE NAV */
+
+
 .side-nav{
   grid-area: side-nav;
+  background: #FAFBFC;
+  padding: 30px;
 }
 
 .content{
