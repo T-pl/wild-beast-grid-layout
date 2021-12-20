@@ -64,6 +64,21 @@ img{
   margin-left: 30px;
 }
 
+.titulo-principal{
+  color: #b07dfb;
+}
+
+.titulo-principal h1{
+  font-size: 3.75em;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.titulo-principal span{
+  font-size: 18px;
+  font-style: italic;
+}
+
 /* SIDE NAV */
 
 
@@ -89,8 +104,59 @@ img{
 }
 .content{
   grid-area: content;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
+p{
+  font-size: 1.2rem;
+  line-height: 1.6;
+  letter-spacing: -0.005em;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.informacoes p + p{
+  margin-top: 30px;
+}
+
+.citacao{
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  padding: 35px 50px;
+  border-radius: 5px;
+}
+
+.citacao p{
+  text-align: center;
+  color: #fff;
+  font-style: italic;
+  font-size: 24px;
+}
+
+.col-wide{
+  grid-column: 1 / -1;
+}
+
+.atributos{
+  border-radius: 5px;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+}
+
+.atributos li{
+  padding: 15px;
+  color: #fff;
+}
+.lobo-um{
+  grid-row: span 2;
+  align-self: end;
+}
+
+.lobo-dois{
+  align-self: end;
+}
 /* ANUNCIOS */
 
 .anuncios{
