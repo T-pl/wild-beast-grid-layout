@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 body, p,h1, ul, li, blockquote{
   padding: 0px;
   margin: 0px;
@@ -67,6 +71,20 @@ img{
   padding: 30px;
 }
 
+.side-nav li a{
+  display: block;
+  min-width: 60px;
+  max-width: 200px;
+  margin: 0 auto 30px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+  transition: 0.1s ease-out;
+}
+.side-nav li a:hover{
+  background: #b07dfb;
+}
 .content{
   grid-area: content;
 }
