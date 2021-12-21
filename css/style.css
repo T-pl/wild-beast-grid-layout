@@ -1,33 +1,39 @@
-*{
+* {
   box-sizing: border-box;
 }
 
-body, p,h1, ul, li, blockquote{
+body,
+p,
+h1,
+ul,
+li,
+blockquote {
   padding: 0px;
   margin: 0px;
   list-style: none;
 }
-body{
-  font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
 }
-img{
+img {
   display: block;
   max-width: 100%;
+  width: 100%;
   border-radius: 5px;
 }
 
 /* GRID ESTRUTURAL */
 
-#estrutura-principal{
+#estrutura-principal {
   display: grid;
   grid-template-columns: minmax(160px, 1fr) 3fr 300px;
-  grid-template-areas: 
-  "cabecalho cabecalho cabecalho"
-  "side-nav content anuncios"
-  "roda-pe roda-pe roda-pe";
+  grid-template-areas:
+    "cabecalho cabecalho cabecalho"
+    "side-nav content anuncios"
+    "roda-pe roda-pe roda-pe";
 }
 
-.cabecalho{
+.cabecalho {
   grid-area: cabecalho;
   background: linear-gradient(135deg, #8844ee, #b07dfb);
   padding: 30px;
@@ -36,16 +42,16 @@ img{
   align-items: center;
 }
 
-.logo{
+.logo {
   max-width: 200px;
 }
 
-.cabecalho nav ul{
+.cabecalho nav ul {
   display: flex;
   flex-wrap: wrap;
 }
 
-.cabecalho nav a{
+.cabecalho nav a {
   text-decoration: none;
   display: block;
   padding: 10px;
@@ -54,9 +60,8 @@ img{
   background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   transition: 0.1s;
-
 }
-.cabecalho nav a:hover{
+.cabecalho nav a:hover {
   background: rgb(0, 0, 0, 0.5);
 }
 
@@ -64,31 +69,30 @@ img{
   margin-left: 30px;
 }
 
-.titulo-principal{
+.titulo-principal {
   color: #b07dfb;
 }
 
-.titulo-principal h1{
+.titulo-principal h1 {
   font-size: 3.75em;
   line-height: 1;
   font-weight: 700;
 }
 
-.titulo-principal span{
+.titulo-principal span {
   font-size: 18px;
   font-style: italic;
 }
 
 /* SIDE NAV */
 
-
-.side-nav{
+.side-nav {
   grid-area: side-nav;
-  background: #FAFBFC;
+  background: #fafbfc;
   padding: 30px;
 }
 
-.side-nav li a{
+.side-nav li a {
   display: block;
   min-width: 60px;
   max-width: 200px;
@@ -99,10 +103,12 @@ img{
   box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
   transition: 0.1s ease-out;
 }
-.side-nav li a:hover{
+.side-nav li a:hover {
   background: #b07dfb;
 }
-.content{
+
+
+.content {
   grid-area: content;
   max-width: 900px;
   margin: 0 auto;
@@ -112,71 +118,119 @@ img{
   gap: 30px;
 }
 
-p{
+.caracteristicas {
+  display: flex;
+  align-items: flex-start;
+}
+
+.caracteristicas > div {
+  width: 80px;
+  text-align: center;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+  position: relative;
+}
+
+.caracteristicas > div:first-child {
+  margin-right: 30px;
+}
+
+.caracteristicas span {
+  display: block;
+  color: #b07dfb;
+}
+
+.numero {
+  color: #b07dfb;
+  font-size: 3em;
+  line-height: 1;
+  margin: 10px auto;
+}
+
+.rotulo {
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 10px 0;
+  position: relative;
+  top: 2px;
+}
+
+p {
   font-size: 1.2rem;
   line-height: 1.6;
   letter-spacing: -0.005em;
   color: rgba(0, 0, 0, 0.7);
+  text-align: justify;
 }
 
-.informacoes p + p{
+.informacoes p + p {
   margin-top: 30px;
 }
 
-.citacao{
+.citacao,
+.atributos {
   background: linear-gradient(135deg, #8844ee, #b07dfb);
-  padding: 35px 50px;
+  padding: 30px;
   border-radius: 5px;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+  align-self: start;
 }
 
-.citacao p{
+.citacao p {
   text-align: center;
   color: #fff;
   font-style: italic;
   font-size: 24px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.col-wide{
+.col-wide {
   grid-column: 1 / -1;
 }
 
-.atributos{
-  border-radius: 5px;
-  background: linear-gradient(135deg, #8844ee, #b07dfb);
+.par-dois {
+  font-size: 1,2em;
+  color: #000;
+  max-width: 16em;
 }
 
-.atributos li{
+.atributos li {
   padding: 15px;
   color: #fff;
+  font-size: 1.125em;
 }
-.lobo-um{
+
+.atributos li + li {
+  border-top: 2px solid #b07dfb;
+}
+.lobo-um {
   grid-row: span 2;
   align-self: end;
 }
 
-.lobo-dois{
+.lobo-dois {
   align-self: end;
 }
 /* ANUNCIOS */
 
-.anuncios{
+.anuncios {
   display: grid;
   grid-area: anuncios;
-  background: #FAFBFC;
+  background: #fafbfc;
   align-content: start;
   padding: 30px;
   gap: 30px;
 }
 
-
 /* FOOTER */
-#roda-pe{
+#roda-pe {
   grid-area: roda-pe;
   background: linear-gradient(135deg, #8844ee, #b07dfb);
-
 }
 
-#roda-pe p{
+#roda-pe p {
   color: #fff;
   text-align: center;
   padding: 30px;
