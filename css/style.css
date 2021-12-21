@@ -30,7 +30,7 @@ img {
   grid-template-areas:
     "cabecalho cabecalho cabecalho"
     "side-nav content anuncios"
-    "roda-pe roda-pe roda-pe";
+    "footer footer footer";
 }
 
 .cabecalho {
@@ -106,7 +106,6 @@ img {
 .side-nav li a:hover {
   background: #b07dfb;
 }
-
 
 .content {
   grid-area: content;
@@ -222,16 +221,76 @@ p {
   align-content: start;
   padding: 30px;
   gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 /* FOOTER */
-#roda-pe {
-  grid-area: roda-pe;
+footer {
+  grid-area: footer;
   background: linear-gradient(135deg, #8844ee, #b07dfb);
 }
 
-#roda-pe p {
+footer p {
   color: #fff;
   text-align: center;
   padding: 30px;
+}
+
+
+
+@media (max-width: 1200px){
+  #estrutura-principal{
+    grid-template-areas: 
+    "cabecalho cabecalho cabecalho"
+    "side-nav content content"
+    "side-nav anuncios anuncios"
+    "footer footer footer";
+  }
+}
+
+@media(max-width: 760px){
+  #estrutura-principal{
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "cabecalho"
+    "side-nav"
+    "content"
+    "anuncios"
+    "footer";
+  }
+  .cabecalho{
+    grid-template-columns: auto;
+  }
+  .logo{
+    margin-bottom: 20px;
+  }
+  .cabecalho nav a{
+    font-size: 1em;
+  }
+  .cabecalho li + li{
+    margin-left: 10px;
+  }
+  .side-nav{
+    padding: 0 30px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  .side-nav ul{
+    display: flex;
+  }
+  .side-nav ul li{
+    flex: 1 0 60px;
+  }
+  .side-nav ul li a{
+    margin: 30px 30px 30px 0;
+  }
+
+}
+
+@media(max-width: 600px){
+  .content{
+    grid-template-columns: auto;
+  }
 }
