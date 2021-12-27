@@ -2,7 +2,7 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-
+/* RESET DOS ESTILOS DO BROWSER */
 body,
 p,
 h1,
@@ -13,6 +13,8 @@ blockquote {
   margin: 0px;
   list-style: none;
 }
+/* RESET DOS ESTILOS DO BROWSER */
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -23,7 +25,7 @@ img {
   border-radius: 5px;
 }
 
-/* GRID ESTRUTURAL */
+/* PROPRIEDADES GRID*/
 
 #estrutura-principal {
   display: grid;
@@ -236,8 +238,9 @@ footer p {
   text-align: center;
   padding: 30px;
 }
-
-
+/* -------------- */
+/* RESPONSIVIDADE */
+/* -------------- */
 
 @media (max-width: 1200px){
   #estrutura-principal{
